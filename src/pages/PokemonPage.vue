@@ -11,6 +11,7 @@
 import PokemonPicture from '@/components/PokemonPicture'
 import PokemonOptions from '@/components/PokemonOptions'
 
+import getPokemonOptions from '@/helpers/getPokemonOptions'
 
 export default {
   components: { PokemonPicture, PokemonOptions}
