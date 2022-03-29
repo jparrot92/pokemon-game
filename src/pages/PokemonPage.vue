@@ -3,7 +3,7 @@
     <h1>¿Quién es este pokémon?</h1>
 
     <PokemonPicture :pokemonId="4" :showPokemon="true"/>
-    <PokemonOptions />
+    <PokemonOptions :pokemons="pokemonArr"/>
   </div>
 </template>
 
@@ -13,9 +13,20 @@ import PokemonOptions from '@/components/PokemonOptions'
 
 import getPokemonOptions from '@/helpers/getPokemonOptions'
 
-getPokemonOptions
-
 export default {
-  components: { PokemonPicture, PokemonOptions}
+  components: { PokemonPicture, PokemonOptions},
+  data() {
+    return {
+      pokemonArr: []
+    }
+  },
+  methods: {
+    async mixPokemonArray() {
+      this.pokemonArr = await getPokemonOptions()
+    }
+  },
+  mounted(){
+    this.mixPokemonArray()
+  }
 }
 </script>
