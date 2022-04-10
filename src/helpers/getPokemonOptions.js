@@ -1,7 +1,6 @@
 import pokemonApi from '../api/pokemonApi'
-import { Promise } from 'core-js'
 
-const getPokemons = () => {
+export const getPokemons = () => {
   const pokemonsArr = Array.from(Array(650))
 
   return pokemonsArr.map((_, index) => index +1)
