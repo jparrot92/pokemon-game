@@ -14,7 +14,7 @@ const getPokemonOptions = async() => {
   return pokemons
 }
 
-const getPokemonNames = async([a,b,c,d] = []) => {
+export const getPokemonNames = async([a,b,c,d] = []) => {
 
   const promiseArr = [
     pokemonApi.get(`/${a}`),
